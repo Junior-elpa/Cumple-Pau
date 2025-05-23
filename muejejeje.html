@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Happy Birthday Pau 🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+            text-align: center;
+            background: url(https://scontent-bog2-2.xx.fbcdn.net/v/t39.30808-6/467828462_9085580418173312_5057548229327932124_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF1UKPWKguKx17rRoYoxjaRk6PVta9LmbmTo9W1r0uZueoqEaDgkFNTdQeecuLRk7rnaqo53NmkuFZEcWp2hzlW&_nc_ohc=6We2P_qVHh4Q7kNvwGg6M_1&_nc_oc=AdlsRaYzNHUtYpgDgPq9avbyNS8nl4Rx_9YIjtx7xq0kZjNNoW-Q2fbEbyCuFWOIquI&_nc_zt=23&_nc_ht=scontent-bog2-2.xx&_nc_gid=E1tBf_cC7ZXx3n1oD7ScmQ&oh=00_AfI_Ers-MD_oolBm6pQcyxAYWM6SoailWbiw54XviySJGA&oe=683656E0) no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: #ffdd57;
+            animation: bounce 1.5s infinite;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.6);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 700px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10px); }
+            100% { transform: translateY(100vh); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Today es tu díaaaa... ¡HAPPY BIRTHDAY TO YOU! 🎂</h1>
+    <h2>
+        Feliz cumple Pau! Nos conocemos desde hace menos de un mes pero eso no me limita a decir que eres una persona muy bacán. Capaz pienses que es raro, pero las charlas contigo son muy chéveres. Espero que pases una súper tarde hoy después de salir, disfrutes una rica comida y tengas un día increíble.  
+        <br><br>Con aprecio,  
+        <strong>Tu compañero, Juniordo</strong>
+    </h2>
+
+    <script>
+        const colors = ["#ff0", "#f0f", "#0ff", "#0f0", "#f00"];
+        for (let i = 0; i < 100; i++) {
+            let confetti = document.createElement("div");
+            confetti.classList.add("confetti");
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.appendChild(confetti);
+        }
+    </script>
+</body>
+</html>
